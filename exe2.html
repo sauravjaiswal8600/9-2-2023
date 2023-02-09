@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<fieldset>
+    <legend>Character: <input id="char" type="text"><br/>
+    <button onclick="checkVowel()" style="color: black; background-color: antiquewhite; font-size: larger;" >Find </button>
+    </legend>
+    <p id="result" >It is <span id="res"></span> Character</p>
+</fieldset>
+
+
+
+
+<script>
+var ch;
+function checkVowel()
+{
+  ch = document.getElementById("char").value;
+  if(ch)
+  {
+    temp = document.getElementById("result");
+    temp.style.display = "block";
+    if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+    {
+      if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+        document.getElementById("res").innerHTML = " Vowel";
+      else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+        document.getElementById("res").innerHTML = " Vowel";
+      else
+        document.getElementById("res").innerHTML = " Consonant";
+    }
+    else
+      document.getElementById("res").innerHTML = "neither Vowel nor Consonant";
+  }
+}
+
+  
+
+</script>
+
+</body>
+</html>
